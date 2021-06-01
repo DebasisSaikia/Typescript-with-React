@@ -1,13 +1,18 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
-function App() {
-  const [number, setNumber] = useState(0);
+interface isState {
+  people: {
+    name: string;
+    age: number;
+    url: string;
+    note?: string;
+  }[];
+}
 
-  const changeNumber = () => {
-    setNumber(1);
-  };
+function App() {
+  const [people, setPeople] = useState<isState["people"]>([]);
+
   return (
     <div className="App">
       <h1>React with typeScript</h1>
