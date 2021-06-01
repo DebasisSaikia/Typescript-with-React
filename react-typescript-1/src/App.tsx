@@ -12,7 +12,14 @@ interface isState {
 }
 
 function App() {
-  const [people, setPeople] = useState<isState["people"]>([]);
+  const [people, setPeople] = useState<isState["people"]>([
+    {
+      name: "debasis",
+      url: "https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png",
+      age: 24,
+      note: "this is note",
+    },
+  ]);
 
   return (
     <div className="App">
