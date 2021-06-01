@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import Lists from "./components/Lists";
 
 interface isState {
   people: {
@@ -16,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <h1>React with typeScript</h1>
+      <Lists people={people} />
     </div>
   );
 }
