@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
+import AddToList from "./components/AddToList";
 import Lists from "./components/Lists";
 
-interface isState {
+export interface isState {
   people: {
     name: string;
     age: number;
@@ -25,6 +26,7 @@ function App() {
     <div className="App">
       <h1>React with typeScript</h1>
       <Lists people={people} />
+      <AddToList people={people} setPeople={setPeople} />
     </div>
   );
 }

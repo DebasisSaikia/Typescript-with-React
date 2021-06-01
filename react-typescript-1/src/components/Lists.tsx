@@ -1,13 +1,5 @@
 import React from "react";
-
-interface isProps {
-  people: {
-    name: string;
-    age: number;
-    url: string;
-    note?: string;
-  }[];
-}
+import { isState as isProps } from "../App";
 
 const Lists: React.FC<isProps> = ({ people }) => {
   const listData = (): JSX.Element[] => {
